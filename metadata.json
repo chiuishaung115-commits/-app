@@ -1,0 +1,6 @@
+{
+  "name": "Gaoming Music School",
+  "description": "A cute, hand-drawn music school management system with admin, reception, and self check-in kiosks.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

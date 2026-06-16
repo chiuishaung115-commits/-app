@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Kiwi+Maru:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Fredoka", "Comic Sans MS", "Kiwi Maru", "Microsoft JhengHei", "BlinkMacSystemFont", sans-serif;
+  --color-brand-brown: #4A3728;
+  --color-brand-cream: #FFFBEB;
+  --color-brand-yellow: #FFD93D;
+  --color-brand-pink: #FF8E9E;
+  --color-brand-blue: #E3F2FD;
+  --color-brand-green: #95CD41;
+  --color-brand-orange: #FFF3E0;
+}
+
+body {
+  background-color: #FFFBEB;
+  color: #4A3728;
+  font-family: var(--font-sans);
+  background-image: radial-gradient(#4A37281A 1.5px, transparent 1.5px), radial-gradient(#4A37281A 1.5px, #FFFBEB 1.5px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+::selection {
+  background-color: #FF8E9E;
+  color: #FFFFFF;
+}
+
+/* Custom hand-drawn sketchy style helpers */
+.sketchy-card {
+  border: 4px solid #4A3728;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  box-shadow: 6px 6px 0px #4A3728;
+  transition: all 0.2s ease-in-out;
+}
+
+.sketchy-card-interactive:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px #4A3728;
+}
+
+.sketchy-input {
+  border: 3px solid #4A3728;
+  border-radius: 12px;
+  background-color: #FFFFFF;
+  color: #4A3728;
+  outline: none;
+  padding: 8px 12px;
+  transition: all 0.15s ease-in-out;
+}
+.sketchy-input:focus {
+  box-shadow: 0px 0px 0px 3px rgba(255, 217, 61, 0.8), 3px 3px 0px #4A3728;
+  border-color: #4A3728;
+}
+
+.sketchy-button {
+  border: 3px solid #4A3728;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #4A3728;
+  transition: all 0.1s ease;
+  user-select: none;
+}
+.sketchy-button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #4A3728;
+}
+
+.sketchy-tab-active {
+  border: 4px solid #4A3728;
+  border-bottom: none;
+  border-radius: 16px 16px 0 0;
+  background-color: #FFFBEB;
+  transform: translateY(3px);
+  z-index: 10;
+}
+
+.sketchy-tab-inactive {
+  border: 3px solid #4A3728;
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  background-color: #E8DFCE;
+  opacity: 0.85;
+}
+
+/* Handwriting/music accents */
+.music-note-float {
+  animation: floatMusic 4s ease-in-out infinite;
+}
+
+@keyframes floatMusic {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(8deg);
+  }
+}
+
+.music-note-float-reverse {
+  animation: floatMusicRev 4.5s ease-in-out infinite;
+}
+
+@keyframes floatMusicRev {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(-10deg);
+  }
+}
+
+/* Scrollbar Style */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #FFFBEB;
+  border-left: 3px solid #4A3728;
+}
+::-webkit-scrollbar-thumb {
+  background: #E8DFCE;
+  border: 3px solid #4A3728;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4A3728;
+}
